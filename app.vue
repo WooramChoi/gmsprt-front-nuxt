@@ -1,5 +1,15 @@
+
+import { NuxtLayout } from '#build/components';
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+	<NuxtLayout>
+		<v-app>
+			<!-- <NuxtPage /> -->
+			<NuxtWelcome />
+		</v-app>
+	</NuxtLayout>
+	<!-- 
+	<div>
+		<NuxtWelcome />
+	</div>
+	 -->
 </template>
