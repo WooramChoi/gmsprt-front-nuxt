@@ -1,12 +1,13 @@
 FROM node:18-alpine AS builder
 WORKDIR /src
-COPY plugins .
-COPY public .
-COPY server .
-COPY app.vue .
-COPY nuxt.config.ts .
-COPY package.json .
-COPY tsconfig.json .
+# COPY plugins .
+# COPY public .
+# COPY server .
+# COPY app.vue .
+# COPY nuxt.config.ts .
+# COPY package.json .
+# COPY tsconfig.json .
+COPY . .
 RUN npm install
 RUN npm run build
 
