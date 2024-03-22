@@ -1,3 +1,5 @@
 <template>
-	<footer>Footer</footer>
+	<UContainer>
+		<footer>Footer</footer>
+	</UContainer>
 </template>

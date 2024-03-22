@@ -11,7 +11,7 @@ provide('isOpenSidebar', isOpenSidebar);
 <template>
 	<app-header />
 	<app-sidebar />
-	<main>
+	<main class="h-dvh overflow-auto">
 		<UContainer>
 			<slot></slot>
 		</UContainer>
