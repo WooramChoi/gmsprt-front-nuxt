@@ -6,6 +6,9 @@
 // 	// 	'auth'
 // 	// ]
 // })
+
+const { data } = await useFetch('/api/boards');
+
 const now = new Date();
 </script>
 <template>
@@ -14,4 +17,5 @@ const now = new Date();
 		<h5>is realtime?</h5>
 		<span>Now: {{ now.getFullYear() }} - {{ now.getMonth() + 1 }} - {{ now.getDate() }}</span>
 	</div>
+	<div>{{ JSON.stringify(data) }}</div>
 </template>
