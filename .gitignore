@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # Google Service Account Key
-gmsprt-5b5d6ca15e61.json
+conf.d/**
