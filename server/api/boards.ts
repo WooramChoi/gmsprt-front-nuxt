@@ -4,6 +4,10 @@ export default defineEventHandler(async (event) => {
 
 	const config = useRuntimeConfig(event);
 
+	// console.log(`[projectId]: ${config.projectId}`);
+	// console.log(`[clientEmail]: ${config.clientEmail}`);
+	// console.log(`[private_key.length]: ${config.privateKey.length}`);
+
 	const db = new Firestore({
 		projectId: config.projectId,
 		credentials: {
