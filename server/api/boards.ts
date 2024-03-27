@@ -1,11 +1,17 @@
 import { Firestore } from '@google-cloud/firestore';
 
-const db = new Firestore({
-	projectId: 'gmsprt',
-	keyFilename: 'conf.d/gmsprt-5b5d6ca15e61.json'
-});
-
 export default defineEventHandler(async (event) => {
+
+	const config = useRuntimeConfig(event);
+
+	const db = new Firestore({
+		projectId: config.projectId,
+		credentials: {
+			client_email: config.clientEmail,
+			private_key: config.privateKey.replace(/\\n/g, '\n'),
+		},
+	});
+
 	const snapshot = await db.collection('boards').get();
 	const boards = new Array();
 	snapshot.docs.forEach((doc) => {
